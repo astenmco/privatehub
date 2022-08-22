@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: 'Jost', sans-serif !important;
+} 
+
+.logo-hub{
+    font-weight: 600;
+} 
+
+.accordion{
+    width : 100%;
+} 
+
+.last_update {
+    font-size: x-small;
+} 
+
+.filter_filters {
+    min-width: 150px;
+} 
+
+.repository_options{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} 
+
+.repository_arch_list{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding-left: 0%;
+} 
+
+.arch_item {
+    font-size: smaller;
+    flex: 1;
+    text-decoration: none;
+    padding: 0.6em 1em;
+    background-color: rgba(0, 50, 255, 0.2);
+    border-radius: 1em;
+} 
+
+.img_github{
+    height: 26px;
+    width: auto;
+    color: black;
+} 
+
+.repository_commit {
+    display: flex;
+    flex-direction: row;
+}
+
+.vertical-center {
+    align-items : center;
+    display : flex;
+}
+
+.tag_subtitle  {
+    font-size: 0.7rem !important;
+}
+
+.btn-clipboard {
+    color : white !important ;
+    background-color: slategrey !important;
+}
+
+.home {
+    height : 100vh;
+    min-width: 100vw;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}

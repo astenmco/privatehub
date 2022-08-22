@@ -1,0 +1,1 @@
+<li><a class="dropdown-item" href="../public/tag_page.php?tag=<?php echo $currentTag->getName();?>&repo=<?php echo $_GET['repo'];?>&arch=<?php echo $manifest['platform']['architecture'];?>"><?php echo $manifest['platform']['os']." / ".$manifest['platform']['architecture']; ?></a></li>

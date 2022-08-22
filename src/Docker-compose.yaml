@@ -1,0 +1,25 @@
+version: '3.6'
+services:
+  registry:
+    image: astenmco/privatehub:0.1-004
+    restart: always
+    volumes: 
+      - $MOUNT_POINT:/var/lib/registry/
+    ports:
+      - $PORT:5000
+    environment:
+      - REGISTRY_STORAGE_DELETE_ENABLED=true
+  registry_cleanup:
+    image: astenmco/privatehub:0.1-004
+    volumes: 
+      - $MOUNT_POINT:/var/lib/registry/  
+    entrypoint: /usr/bin/remove_empty.sh
+    environment:
+      - REGISTRY=registry
+  registry_garbage:
+    image: astenmco/privatehub:0.1-004
+    volumes: 
+      - $MOUNT_POINT:/var/lib/registry/ 
+    environment:
+      - REGISTRY=registry 
+    entrypoint: /bin/registry garbage-collect -m /etc/docker/registry/config.yml
